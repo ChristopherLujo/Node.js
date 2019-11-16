@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Postal Rate Calculator</title>
+        <link type="text/css" rel="stylesheet" href="/stylesheets/materialize.css" />
+        <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Postal Rate Calculator</h1>
+                <form class="col s12" action="/getRate" method="POST">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="weight" type="text" value="<%=  weight %>" 
+                                required disabled>
+                            <label for="weight">Weight</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                   
+                            <input id="mail_name" type="text" value="<%= mail_name %>" required disabled>
+                            <label for="mail_name">Mail Type</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                        
+                        <input id="price" type="text" value="$<%= price %>" required disabled>
+                        <label for="price">Price</label>
+                    </div>
+                </div>
+                </form>
+                <a class="button" href="/"></i>Reset</a>
+            </div>
+            <script type="text/javascript" src="/javascript/materialize.js"></script>
+            <script type="text/javascript" src="/javascript/main.js"></script>
+    </body>
+</html>

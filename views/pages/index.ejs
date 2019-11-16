@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Postal Rate Calculator</title>
+        <link type="text/css" rel="stylesheet" href="/stylesheets/materialize.css"/>
+        <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Postal Rate Calculator</h1>
+            <div class="row">
+                <form class="col s12" action="/getRate" method="POST">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix"></i>
+                            <input id="weight" type="number" name="weight" step="0.1" min="0.1" max="13" class="validate"
+                                required>
+                            <label for="weight">Weight</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <i class="material-icons prefix"></i>
+                        <select name="mail_type" required>
+                            <option value="" disabled selected></option>
+                            <option value="letters_stamped">Letters (Stamped</option>
+                            <option value="letters_metered">Letters (Metered</option>
+                            <option value="large_envelopes_flats">Large Envelopes (Flats)</option>
+                            <option value="first_class_package_service_retail">First-Class Package Service-Retail</option>
+                        </select>
+                        <label>Type of Mail</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="button" type="submit" name="action">Submit
+                            <i class="material-icons right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <script type="text/javascript" src="/javascript/materialize.js"></script>
+            <script type="text/javascript" src="/javascript/main.js"></script>
+    </body>
+</html>
